@@ -10,7 +10,7 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
-// post data
+// post data | penyanyi indonesia
 app.post('/api/penyanyi', (req, res) => {
     const data = { ...req.body };
     const querySql = 'INSERT INTO indonesian_singers SET ?';
@@ -23,7 +23,7 @@ app.post('/api/penyanyi', (req, res) => {
     });
 });
 
-// read data
+// read data | penyanyi indonesia
 app.get('/api/penyanyi', (req, res) => {
     const querySql = "SELECT * FROM indonesian_singers";
 
@@ -37,7 +37,7 @@ app.get('/api/penyanyi', (req, res) => {
     });
 });
 
-// update data
+// update data | penyanyi indonesia
 app.put('/api/penyanyi/:id', (req, res) => {
     const data = { ...req.body };
     const querySearch = 'SELECT * FROM indonesian_singers WHERE id = ?';
@@ -158,7 +158,7 @@ app.get('/api/penyanyi/:id', (req, res) => {
 });
 
 
-// delete data
+// delete data | penyanyi indonesia
 app.delete('/api/penyanyi/:id', (req, res) => {
     const querySearch = 'SELECT * FROM indonesian_singers WHERE id = ?';
     const queryDelete = 'DELETE FROM indonesian_singers WHERE id = ?';
