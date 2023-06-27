@@ -23,7 +23,7 @@ app.post('/api/penyanyi', (req, res) => {
     });
 });
 
-// read data / get data film
+// read data
 app.get('/api/penyanyi', (req, res) => {
     const querySql = "SELECT * FROM indonesian_singers";
 
